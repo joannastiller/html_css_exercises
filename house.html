@@ -20,6 +20,7 @@
             width: 200px;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 18px;
+            text-transform: uppercase;
             color: white;
             background-color: rgb(109, 11, 165);
             border-radius: 5px;
@@ -51,8 +52,8 @@
         span:hover~div:first-of-type {
             top: 50%;
             left: 50%;
-            width: 300px;
-            height: 200px;
+            width: 25vw;
+            height: 15vw;
             transform: translate(-50%, -50%);
         }
 
@@ -64,17 +65,19 @@
         }
 
         span:hover~div:nth-of-type(2) {
-            top: 40%;
-            left: 42%;
-            width: 60px;
-            height: 60px;
+            top: calc(50% - 2vw);
+            left: calc(50% - 7vw);
+            width: 5vw;
+            height: 6vw;
+            transform: translate(-50%, -50%);
         }
 
         span:hover~div:nth-of-type(3) {
-            top: 40%;
-            left: 54%;
-            width: 60px;
-            height: 60px;
+            top: calc(50% - 2vw);
+            left: calc(50% + 7vw);
+            width: 5vw;
+            height: 6vw;
+            transform: translate(-50%, -50%);
         }
 
         /* DOOR */
@@ -84,10 +87,11 @@
         }
 
         span:hover~div:nth-of-type(4) {
-            top: 50%;
-            left: 48%;
-            width: 60px;
-            height: 100px;
+            top: calc(50% + 3.5vw);
+            left: 50%;
+            width: 5vw;
+            height: 8vw;
+            transform: translate(-50%, -50%);
         }
 
 
@@ -100,11 +104,11 @@
         }
 
         span:hover~div:nth-of-type(5) {
-            top: 21%;
-            left: calc(42% + 3px);
-            width: 210px;
-            height: 210px;
-            transform: rotate(45deg);
+            top: calc(50% - 7.5vw);
+            left: 50%;
+            width: calc(25vw / 1.41);
+            height: calc(25vw / 1.41);
+            transform: translate(-50%, -50%) rotate(45deg);
         }
 
         /* CHIMNEY */
@@ -115,17 +119,18 @@
         }
 
         span:hover~div:nth-of-type(6) {
-            top: 18%;
-            left: 54%;
-            width: 40px;
-            height: 90px;
+            top: calc(50% - 17vw);
+            left: calc(50% + 5vw);
+            width: 3vw;
+            height: 7vw;
+
         }
     </style>
 
 </head>
 
 <body>
-    <span>BUDUJEMY</span>
+    <span>Zbuduj dom</span>
     <div></div>
     <div></div>
     <div></div>
