@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buttons</title>
+    <style>
+        .first,
+        .second,
+        .third {
+            position: absolute;
+            background-color: transparent;
+            border-style: none;
+            color: #1288cc;
+            font-family: Arial, sans-serif;
+            font-size: 40px;
+            letter-spacing: 1px;
+            overflow: hidden;
+        }
+
+        .first {
+            top: 20%;
+            left: calc(50% - 100px);
+            width: 200px;
+            padding: 10px 0;
+        }
+
+        .first::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 90%;
+            height: 4px;
+            background-color: #1288cc;
+            transition: .4s;
+        }
+
+        .first:hover::after {
+            left: 5%;
+        }
+
+        .second {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 80px;
+            width: 200px;
+            border: 2px solid #1288cc;
+            border-radius: 20px;
+            box-shadow: 0 0 0 4px white, 0 0 0 6px #1288cc;
+            transition: .4s;
+        }
+
+        .second::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #1288cc;
+            transition: .4s;
+            z-index: -1;
+        }
+
+        .second:hover::after {
+            height: 100%;
+        }
+
+        .second:hover {
+            color: white;
+        }
+
+        .third {
+            bottom: 20%;
+            left: calc(50% - 100px);
+            height: 80px;
+            width: 200px;
+            border: 2px solid #1288cc;
+            border-radius: 20px;
+            box-shadow: 0 0 0 4px white, 0 0 0 6px #1288cc;
+            transition: .4s .2s;
+
+        }
+
+        .third::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+            right: -100%;
+            width: 100%;
+            height: 5px;
+            background-color: #1288cc;
+            transition: right .2s, height .4s .3s;
+            transform: translateY(-50%);
+        }
+
+        .third:hover {
+            color: white;
+        }
+
+        .third:hover::after {
+            right: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="first">Button 1</button>
+    <button class="second">Button 2</button>
+    <button class="third">Button 3</button>
+
+</body>
+
+</html>
