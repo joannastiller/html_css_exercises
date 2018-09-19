@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Three dots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 70px;
+            letter-spacing: 4px;
+        }
+
+        span {
+            opacity: 0;
+            animation: dot1 3s linear infinite;
+        }
+
+        span:nth-of-type(2) {
+            animation-name: dot2;
+        }
+
+        span:nth-of-type(3) {
+            animation-name: dot3;
+        }
+
+        @keyframes dot1 {
+            6% {
+                opacity: 0;
+            }
+
+            9% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes dot2 {
+            33% {
+                opacity: 0;
+            }
+
+            36% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes dot3 {
+            60% {
+                opacity: 0;
+            }
+
+            63% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>Title<span>.</span><span>.</span><span>.</span></p>
+
+</body>
+
+</html>
