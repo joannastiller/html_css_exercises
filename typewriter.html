@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        p {
+            position: relative;
+            display: inline-block;
+            margin-left: 50px;
+            font-family: monospace;
+            font-size: 40px;
+            letter-spacing: 3px;
+            overflow: hidden;
+        }
+
+        p::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0px;
+            width: 270px;
+            height: 70px;
+            background-color: white;
+            border-left: 2px solid black;
+            animation: type 3s steps(10, start), cursor .5s linear infinite;
+        }
+
+        @keyframes type {
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes cursor {
+            0% {
+                border-color: transparent;
+            }
+
+            10% {
+                border-color: transparent;
+            }
+
+            25% {
+                border-color: black;
+            }
+
+            75% {
+                border-color: black;
+            }
+
+            90% {
+                border-color: transparent;
+            }
+
+            100% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Typewriter</p>
+    </div>
+</body>
+
+</html>
